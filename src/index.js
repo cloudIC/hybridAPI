@@ -93,6 +93,10 @@ const hybridAPI = {
     return invokeMethod('openPackage', packageName)
   },
 
+  scanCode(params = {}) {
+    return invokeMethod('scanCode', params)
+  },
+
   setRightMenu,
   clearRightMenu,
 

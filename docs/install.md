@@ -46,3 +46,6 @@ hybridAPI.concatList(10)
   // response.name === 'PERMISSION_DENIED'
 })
 ```
+
+## 注意事项
+- 目前暂没有支持对于失败情况的处理，比如扫码时未对相机进行「允许」类的授权操作。于是在交互方面会产生一定影响，功能已在规划中。
