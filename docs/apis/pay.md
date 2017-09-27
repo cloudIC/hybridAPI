@@ -17,17 +17,29 @@ hybridAPI.pay({
   merchantId: 'merchant id',
   merchantOrderNo: 'order number',
   xShard: 'the value of shard id',
-  action(response) {
-    let { status } = response
-    if (status === 'success') {
-      ...
-    }
-    if (status === 'failure') {
-      ...
-    }
-    if (status === 'cancel') {
-      ...
-    }
-  },
 })
+.then(response => {
+  // 见 Response 结构
+})
+.catch(error => {
+  // 见 Error 结构
+})
+```
+
+## Response 结构
+``` javascript
+{
+  merchantId: '',
+  merchantOrderNo: '',
+  status: 'success'
+}
+```
+
+## Error 结构
+``` javascript
+{
+  // 'NOT_SUPPORT': 当前版本不支持 Native 支付 | 'CANCEL': 用户取消支付 | 'FAILURE': 支付失败
+  name: [String],
+  data: [Response]
+}
 ```
