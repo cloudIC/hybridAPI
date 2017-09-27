@@ -57,7 +57,7 @@ const hybridAPI = {
   },
 
   selectHongbao(sn) {
-    return invokeMethod(selectHongbao, sn, null)
+    return invokeMethod('selectHongbao', sn, null)
   },
 
   selectCoupon(id) {
