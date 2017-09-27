@@ -4,7 +4,7 @@
 
 ``` javascript
 /**
-  colorString: '#RRGGBB' 或 '#AARRGGBB' 或 '#RRGGBB,#AARRGGBB' (表示渐变)
+  colorString: '#RRGGBB' 或 '#AARRGGBB'(AA 代表透明度，例如 07) 或 '#RRGGBB,#AARRGGBB' (表示渐变)
   colorOption: {
    from: colorString,  // 起始颜色，即滚动高度小于 triggerHeight 时的颜色
    to: colorString,    // 终止颜色，即滚动高度大于 triggerHeight 时的颜色
@@ -15,6 +15,8 @@
 
 hybridAPI.setNav({
   // 是否沉浸。注意：沉浸后导航栏底下的 webview 不可点击。
+  // 当 immersive 设置为 true 的时候，同时会默认将导航栏背景设置为透明。并且当 webview 向上滚动到一定距离，导航栏变为默认品牌背景色
+  // 此时如果希望自定义，可设置 navBg 参数来进行覆盖
   immersive: [Boolean],
 
   // 这个滚动高度为分界线，在这以上取 `from` 颜色，以下取 `to` 颜色。

@@ -57,7 +57,7 @@ const hybridAPI = {
   },
 
   selectHongbao(sn) {
-    return invokeMethod(selectHongbao, sn, null)
+    return invokeMethod('selectHongbao', sn, null)
   },
 
   selectCoupon(id) {
@@ -91,6 +91,10 @@ const hybridAPI = {
 
   openPackage(packageName) {
     return invokeMethod('openPackage', packageName)
+  },
+
+  scanCode(params = {}) {
+    return invokeMethod('scanCode', params)
   },
 
   setRightMenu,

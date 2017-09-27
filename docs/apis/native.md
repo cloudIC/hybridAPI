@@ -39,3 +39,21 @@ hybridAPI.checkPackages(packages)
 // packageName [String] 要打开的应用包名
 hybridAPI.openPackage(packageName)
 ```
+
+## 扫码（Support: 7.22）
+``` javascript
+/* @param params {Object}
+ * @param params.needResult {Number} 是否需要返回结果，可选值：0,1。
+ * ** 0 代表对于扫描出的结果由 App 来进行后续操作（例如打开二维码中的 URL，跳转到 scheme）
+ * ** 1 代表将扫描得出的结果返回给调用方
+ * @param params.type {Array} 扫码类型，可选值 ['qrCode', 'barCode']
+ * ** qrcode 二维码
+ * ** barCode 条形码
+ * @return {String} 扫码得到的结果
+ */
+hybridAPI.scanCode(params)
+.then(response => {
+  //
+})
+.catch(() => {})
+```

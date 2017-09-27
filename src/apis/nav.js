@@ -7,17 +7,24 @@ const handleOption = option => {
   return option
 }
 
+const immersiveMode = (immersive, navBg = {}) => {
+  if (immersive !== true) return
+
+  invokeMethod('setNavBgColor', Object.assign({
+    from: '#00ffffff',
+    to: '#00aaff,#0085ff'
+  }, navBg))
+}
+
 export default ({ immersive, statusText, navBg, navText, triggerHeight }) => {
   if (immersive !== undefined) {
     invokeMethod('setImmersiveMode', immersive)
+    immersiveMode(immersive, navBg)
   }
   if (statusText !== undefined) {
-    if (statusText === 'black') {
-      statusText = { solid: false }
-    } else if (statusText === 'white') {
-      statusText = { solid: true }
-    }
-    invokeMethod('setLightStatusBar', statusText)
+    invokeMethod('setLightStatusBar', {
+      solid: statusText === 'white'
+    })
   }
   if (navBg !== undefined) {
     invokeMethod('setNavBgColor', handleOption(navBg))
