@@ -26,5 +26,11 @@
   },
   "dependencies": {
     "bridge-protocol": "0.2.0"
+  },
+  "faas": {
+    "domain": "hybrid",
+    "public": "examples",
+    "author_name": "waimai fe",
+    "author_email": "fe.waimai@ele.me"
   }
 }
