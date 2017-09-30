@@ -57,3 +57,18 @@ hybridAPI.scanCode(params)
 })
 .catch(() => {})
 ```
+
+## 退出确认（在点击返回时阻止）
+``` javascript
+/*
+ * @param options {Object}
+ * @param options.title {String} 弹窗标题
+ * @param options.content {String} 弹窗内容
+ * @param options.yes_text {String} 确认按钮文案
+ * @param options.no_text {String} 取消按钮文案
+ * @param options.yes_scheme {String} eleme scheme 为空则退出webview, 否则跳转scheme 对应页面
+ * @param options.no_scheme {String} eleme scheme 为空则关闭对话框, 否则关闭对话框并进入相应页面
+ * @return null
+ */
+hybridAPI.exitConfirm(options)
+```

@@ -1,5 +1,10 @@
-# 编辑
+## 编辑文档
 ``` shell
-npm install
-npm run docs
+$ make doc
 ```
+
+## 发布示例
+```
+$ make example
+```
+

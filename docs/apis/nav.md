@@ -1,6 +1,9 @@
-# 导航栏的样式
+# 导航栏
 
+## 配置导航栏样式
 > 7.18 及以后版本支持
+
+> 注意：`#RRGGBB` 不能省略 `#` 号
 
 ``` javascript
 /**
@@ -36,4 +39,16 @@ hybridAPI.setNav({
 })
 ```
 
-> 颜色值说明：`#RRGGBB` 不能省略 `#` 号
+## 获取状态栏和导航栏高度
+
+``` javascript
+/*
+ * @return response {Object}
+ * response.status_bar {String} 状态栏高度
+ * response.nav_bar {String} 导航栏高度
+ */
+hybridAPI.getTopBarHeight()
+.then(response => {
+  ...
+})
+```

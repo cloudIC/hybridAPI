@@ -19,6 +19,8 @@ $ npm install git+ssh://git@github.com/eleme/hybridAPI.git#${version}
 
 > `hybridAPI` 的每一个方法都返回了一个 `Promise` 对象
 
+> **注意：** `hybridAPI` 的调用会有一层权限检测，在开始使用前，请保证你所开发的页面域名是以 `.elenet.me` `.ele.me` 结尾，否则无法正常工作。
+
 ``` javascript
 hybridAPI[method]()
 .then(response => {

@@ -63,6 +63,14 @@ const apis = [
       hybridAPI.setTitle('Test Title')
     },
   }, {
+    button: 'get top bar height',
+    method() {
+      hybridAPI.getTopBarHeight()
+      .then((response) => {
+        alert(JSON.stringify(response))
+      })
+    },
+  }, {
     button: '关闭 webview',
     inline: true,
     method() {
