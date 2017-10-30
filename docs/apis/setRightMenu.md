@@ -14,7 +14,8 @@ hybridAPI.setRightMenu([
 ``` javascript
 {
   text: '分享',
-  eventName: 'shareStage', // 自定义的 event 事件名，你可以自己捕获到。
+  iconHash: '5e7a830bd21685c1e3b0ff465afb95aepng', // 图片 hash 地址或者图片绝对路径
+  eventName: 'shareStage', // 自定义的 event 事件名，你可以自己捕获到。
   action() { // 当点击这个自定义按钮时触发的行为
     hybridAPI.sharePanel({
       targets: ['weixin', 'weixin_timeline', 'weibo', 'qq', 'qzone'],
